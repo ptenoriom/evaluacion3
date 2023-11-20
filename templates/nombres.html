@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+<h1>Caracteres de nombres</h1>
+<p>Este es el fomulario que compara la cntidad de caracteres entre 3 nombres y compara muestra la cantidad de estos que componen al más lago.</p>
+ <form method="POST" action="/ejercicio2">
+        <label for="nombre1">Nombre 1:</label>
+        <input type="text" name="nombre1" required><br>
+
+        <label for="nombre2">Nombre 2:</label>
+        <input type="text" name="nombre2" required><br>
+
+        <label for="nombre3">Nombre 3:</label>
+        <input type="text" name="nombre3" required><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
+
+{% if nombre_mas_largo is defined and longitud is defined %}
+        <h2>Resultado:</h2>
+        <p>El nombre con más caracteres es: {{ nombre_mas_largo }}</p>
+        <p>El nombre tiene: {{ longitud }} caracteres</p>
+    {% endif %}
